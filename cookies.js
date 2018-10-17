@@ -55,8 +55,6 @@
 
     class Oven {
         makeCookies(cookies, timing) {
-
-
                 for (let i = 0; i <= timing; i++) {
                     console.log(cookies[i].timing)
                     if (cookies[i].timing === timing) {

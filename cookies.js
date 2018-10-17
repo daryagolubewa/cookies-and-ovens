@@ -8,17 +8,17 @@
             this.status = 'doughy'
         }
 
-        static makeDoughCookies(cookiesNumber) {
-            let doughCookies = [];
-            if(cookiesNumber <= 50) {
-                for (let i = 1; i <= cookiesNumber; i++) {
-                    doughCookies.push(new this());
-                }
-            } else {
-                throw Error('Too many cookies! The number of cookies should be under 50');
-            }
-            return doughCookies;
-        }
+        //   makeDoughCookies(cookiesNumber) {
+        //     let doughCookies = [];
+        //     if(cookiesNumber <= 50) {
+        //         for (let i = 1; i <= cookiesNumber; i++) {
+        //             doughCookies.push(new this());
+        //         }
+        //     } else {
+        //         throw Error('Too many cookies! The number of cookies should be under 50');
+        //     }
+        //     return doughCookies;
+        // }
     }
 
     class ChocolateCookie extends Cookie {
@@ -41,7 +41,7 @@
         }
     }
 
-    class kurabieCookie extends Cookie {
+    class KurabieCookie extends Cookie {
         constructor() {
             super()
 
@@ -54,6 +54,18 @@
 
 
     class Oven {
+	makeDoughCookies(cookieType, cookiesNumber) {
+            let doughCookies = [];
+            if(cookiesNumber <= 50) {
+                for (let i = 1; i <= cookiesNumber; i++) {
+                    doughCookies.push(cookieType);
+                }
+            } else {
+                throw Error('Too many cookies! The number of cookies should be under 50');
+            }
+            return doughCookies;
+        }
+
         makeCookies(cookies, timing) {
                 for (let i = 0; i <= timing; i++) {
                     console.log(cookies[i].timing)
@@ -71,9 +83,18 @@
     }
 
 
-    let oven = new Oven();
-    let cookies = AlmondCookie.makeDoughCookies(30);
-    console.log(cookies);
-    console.log(oven.makeCookies(cookies, 40));
+    // let oven = new Oven();
+    // let cookies = oven.makeDoughCookies(new KurabieCookie(), 3);
+    // console.log(cookies);
+    // console.log(oven.makeCookies(cookies, 40));
 
 
+module.exports = {
+	Cookie: Cookie,
+	ChocolateCookie: ChocolateCookie,
+	AlmondCookie: AlmondCookie,
+	KurabieCookie: KurabieCookie,
+	Oven: Oven
+	// makeDoughCookies: makeDoughCookies,
+	// makeCookies: makeCookies
+}

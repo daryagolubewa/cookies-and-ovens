@@ -108,7 +108,7 @@ As we build our objects, it's a great opportunity to write some tests describing
 Our MVP was a success, so we're going to expand the program, adding some new features—and testing them, as always.  We should be sure to implement the following:
 
 - We can make multiple types of cookies, each with a different baking time.
-- Cookies have four possible status values depending on how long they've been baked: `:doughy`, `:almost_ready`, `:ready`, and `:burned`.
+- Cookies have four possible status values depending on how long they've been baked: `doughy`, `almost_ready`, `ready`, and `:burned`.
 
 
 ### Release 2: Refactor

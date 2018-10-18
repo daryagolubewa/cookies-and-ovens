@@ -8,17 +8,7 @@
             this.status = 'doughy'
         }
 
-        //   makeDoughCookies(cookiesNumber) {
-        //     let doughCookies = [];
-        //     if(cookiesNumber <= 50) {
-        //         for (let i = 1; i <= cookiesNumber; i++) {
-        //             doughCookies.push(new this());
-        //         }
-        //     } else {
-        //         throw Error('Too many cookies! The number of cookies should be under 50');
-        //     }
-        //     return doughCookies;
-        // }
+       
     }
 
     class ChocolateCookie extends Cookie {
@@ -58,7 +48,7 @@
             let doughCookies = [];
             if(cookiesNumber <= 50) {
                 for (let i = 1; i <= cookiesNumber; i++) {
-                    doughCookies.push(cookieType);
+                    doughCookies.push(new cookieType());
                 }
             } else {
                 throw Error('Too many cookies! The number of cookies should be under 50');
@@ -83,18 +73,12 @@
     }
 
 
-    // let oven = new Oven();
-    // let cookies = oven.makeDoughCookies(new KurabieCookie(), 3);
-    // console.log(cookies);
-    // console.log(oven.makeCookies(cookies, 40));
-
-
+ 
 module.exports = {
 	Cookie: Cookie,
 	ChocolateCookie: ChocolateCookie,
 	AlmondCookie: AlmondCookie,
 	KurabieCookie: KurabieCookie,
 	Oven: Oven
-	// makeDoughCookies: makeDoughCookies,
-	// makeCookies: makeCookies
+	
 }
